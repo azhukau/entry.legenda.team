@@ -10,7 +10,7 @@ Future main() async {
   serverContext.usePrivateKey(serverKey);
 
   var server = await HttpServer.bindSecure(
-    new InternetAddress("anyIPv4"),
+    InternetAddress.ANY_IP_V4,
     4047,
     serverContext,
   );
